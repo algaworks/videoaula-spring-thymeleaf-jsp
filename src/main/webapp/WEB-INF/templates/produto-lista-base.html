@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+	
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"/>
+	
+	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+	
+	    <link href="../../resources/css/style.css" rel="stylesheet"/>
+	
+	    <title>AlgaWorks - Thymeleaf</title>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		    <div class="container">
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed"
+		                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+		                    aria-controls="navbar">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		
+		            <a class="navbar-brand" href="#">ProdWorks</a>
+		        </div>
+		        <div id="navbar" class="collapse navbar-collapse">
+		            <ul class="nav navbar-nav">
+						<li><a href="#">Produtos</a></li>
+		            </ul>
+		            
+		            <ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								AlgaWorks 
+								<span class="caret"></span>
+							</a>
+							
+							<ul class="dropdown-menu">
+								<li><a href="http://www.algaworks.com" target="_blank">Site</a></li>
+								<li><a href="http://www.facebook.com/algaworks" target="_blank">Facebook</a></li>
+				                <li><a href="http://www.youtube.com/algaworks" target="_blank">YouTube</a></li>
+				                <li><a href="http://github.com/algaworks" target="_blank">Github</a></li>
+				                <li><a href="http://blog.algaworks.com/" target="_blank">Nosso Blog</a></li>
+							</ul>
+						</li>
+		            </ul>
+		        </div>
+		    </div>
+		</nav>
+		
+		<section class="container">
+			<h3 class="page-header">
+				Página de produtos
+			</h3>
+
+			<form method="get" action="#">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Filtro
+					</div>
+					
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="form-group">
+									<label class="control-label" for="codigo">Código: </label>
+									<input class="form-control" id="codigo"/>
+								</div>
+							</div>
+							
+							<div class="col-sm-8">
+								<div class="form-group">
+									<label class="control-label" for="nome">Nome: </label>
+									<input class="form-control" id="nome"/>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<button class="btn btn-default" type="submit">
+								<span class="fa fa-search"></span>
+								Pesquisar
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>			
+			
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th>Código</th>
+						<th>Nome</th>
+						<th>Preço</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Novo Kindle (Preto) com tela sensível ao toque e Wi-Fi , 8a. Geração</td>
+						<td>R$299,00</td>
+					</tr>
+					
+					<tr>
+						<td>2</td>
+						<td>Kindle Paperwhite Wi-Fi, iluminação embutida, tela de 6" sensível ao toque de alta definição</td>
+						<td>R$479,00</td>
+					</tr>
+					
+					<tr>
+						<td>3</td>
+						<td>Kindle Voyage Wi-Fi, iluminação embutida, tela de 6" sensível ao toque de alta resolução</td>
+						<td>R$899,00</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		<div class="container">
+	    	<hr />
+	    	
+		    <footer>
+		    	<h4>Aula Thymeleaf e JSP</h4>
+			</footer>	
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>		
+	</body>
+</html>
