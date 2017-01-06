@@ -16,16 +16,14 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import com.algaworks.thymeleaf.config.WebConfig;
-
-public class InicioSpringWeb implements WebApplicationInitializer {
+public class SpringWebInitializer implements WebApplicationInitializer {
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
         
-        applicationContext.register(WebConfig.class);
-        
+        applicationContext.scan(SpringWebInitializer.class.getPackage().getName());
+                
         servletContext.addListener(new ContextLoaderListener(applicationContext));
         servletContext.addListener(new RequestContextListener());
         
